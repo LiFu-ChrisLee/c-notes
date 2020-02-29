@@ -2,21 +2,17 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "linux gcc build",
-      "command": "/usr/bin/gcc",
+      "label": "win gcc build",
+      "command": "D:\\DevTools\\mingw64\\bin\\gcc.exe",
       "args": [
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.out"
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
       ],
       "options": {
-        "cwd": "/usr/bin"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
-      "group": "build"
+        "cwd": "D:\\DevTools\\mingw64\\bin"
+      }
     },
     {
       "type": "shell",
@@ -35,7 +31,25 @@
         "$gcc"
       ],
       "group": "build"
-    }
+    },
+    {
+      "type": "shell",
+      "label": "linux gcc build",
+      "command": "/usr/bin/gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
   ],
   "version": "2.0.0"
 }
