@@ -50,6 +50,24 @@
       ],
       "group": "build"
     },
+    {
+      "type": "shell",
+      "label": "docker gcc build",
+      "command": "/usr/local/bin/gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/local/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    }
   ],
   "version": "2.0.0"
 }
