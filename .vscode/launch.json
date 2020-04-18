@@ -114,7 +114,7 @@
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
-      "miDebuggerPath": "/usr/bin/gdb",
+      "miDebuggerPath": "/root/gdb/gdb/gdb",
       "MIMode": "gdb",
       "setupCommands": [
         {
@@ -134,7 +134,7 @@
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
-      "miDebuggerPath": "/usr/bin/gdb",
+      "miDebuggerPath": "/root/gdb/gdb/gdb",
       "MIMode": "gdb",
       "setupCommands": [
         {
