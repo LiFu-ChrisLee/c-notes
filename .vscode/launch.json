@@ -47,7 +47,7 @@
     },
     {
       "preLaunchTask": "mac clang build",
-      "name": "mac clang compile & lanuch",
+      "name": "mac clang compile & launch",
       "type": "lldb",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -55,7 +55,7 @@
       "cwd": "${workspaceFolder}"
     },
     {
-      "name": "mac clang lanuch",
+      "name": "mac clang launch",
       "type": "lldb",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -64,7 +64,7 @@
     },
     {
       "preLaunchTask": "linux gcc build",
-      "name": "linux gcc compile & lanuch",
+      "name": "linux gcc compile & launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -84,7 +84,7 @@
       ]
     },
     {
-      "name": "linux lanuch",
+      "name": "linux launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -105,7 +105,7 @@
     },
     {
       "preLaunchTask": "docker gcc build",
-      "name": "docker gcc compile & lanuch",
+      "name": "docker gcc compile & launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "name": "docker lanuch",
+      "name": "docker launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
