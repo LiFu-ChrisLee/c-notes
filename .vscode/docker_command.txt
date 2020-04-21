@@ -1,0 +1,19 @@
+# run docker container
+docker run -itd -v my-app:/root/docker-dir -v gdb-path:/root/docker-gdb -v .vscode-server-path:/roor/.vscode-server --privileged=true gcc /bin/bash
+
+
+# guide
+https://blog.csdn.net/hanq4998/article/details/84675718
+
+# download gdb source
+https://mirrors.tuna.tsinghua.edu.cn/gnu/gdb/
+
+# extract .tar.xz
+
+# make build dir
+mkdir gdb-source-path/build
+cd gdb-source-path/build
+
+# compile gdb
+../configure --prefix=gdb-source-path/build
+make

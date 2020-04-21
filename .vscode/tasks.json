@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "docker g++ build",
+      "command": "/usr/local/bin/g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/local/bin"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
