@@ -1,0 +1,6 @@
+{
+  // 需要将 mingw/bin 配置到环境变量
+  // ctrl+shift+p -> shell -> 终端: 管理工作区 shell 权限 -> 允许配置工作区 shell
+  "terminal.integrated.automationShell.windows": "C:/windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+  "terminal.integrated.shell.windows": null
+}

@@ -10,6 +10,21 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Windows",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "D:/DevTools/mingw64/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
