@@ -1,19 +1,29 @@
 # run docker container
-docker run -itd -v my-app:/root/docker-dir -v gdb-path:/root/docker-gdb -v .vscode-server-path:/roor/.vscode-server --privileged=true gcc /bin/bash
+docker run -itd -v (my-app):/root/(docker-dir) -v (gdb-path):/root/gdb -v (.vscode-server-path):/root/.vscode-server --privileged=true gcc /bin/bash
 
 
 # guide
-https://blog.csdn.net/hanq4998/article/details/84675718
+https://blog.csdn.net/wubw0585/article/details/88061631
 
 # download gdb source
 https://mirrors.tuna.tsinghua.edu.cn/gnu/gdb/
 
 # extract .tar.xz
 
+# install dependencies
+apt update
+apt install texinfo
+
+# install path
+mkdir (install-path)
+
 # make build dir
-mkdir gdb-source-path/build
-cd gdb-source-path/build
+mkdir (gdb-source-path)/build
 
 # compile gdb
-../configure --prefix=gdb-source-path/build
+cd (gdb-source-path)/build
+../configure --prefix=(install-path)
 make
+
+# install gdb
+make install
