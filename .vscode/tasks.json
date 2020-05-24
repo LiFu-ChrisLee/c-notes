@@ -10,9 +10,11 @@
         "-o",
         "${fileDirname}\\${fileBasenameNoExtension}.exe"
       ],
+      "problemMatcher": [],
       "options": {
         "cwd": "D:\\DevTools\\mingw64\\bin"
-      }
+      },
+      "group": "build"
     },
     {
       "type": "shell",
@@ -27,9 +29,7 @@
       "options": {
         "cwd": "/usr/bin"
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": [],
       "group": "build"
     },
     {
@@ -45,9 +45,7 @@
       "options": {
         "cwd": "/usr/bin"
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": [],
       "group": "build"
     },
     {
@@ -63,9 +61,7 @@
       "options": {
         "cwd": "/usr/local/bin"
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": [],
       "group": "build"
     }
   ],
