@@ -46,7 +46,7 @@
       ]
     },
     {
-      "preLaunchTask": "linux g++ build",
+      "preLaunchTask": "docker g++ build",
       "name": "docker compile & lanuch",
       "type": "cppdbg",
       "request": "launch",

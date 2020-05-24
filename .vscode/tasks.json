@@ -2,7 +2,7 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "linux g++ build",
+      "label": "docker g++ build",
       "command": "/usr/local/bin/g++",
       "args": [
         "-g",
@@ -21,6 +21,22 @@
     },
     {
       "type": "shell",
+      "label": "linux g++ build",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "type": "shell",
       "label": "win g++ build",
       "command": "D:/DevTools/mingw64/bin/g++.exe",
       "args": [
@@ -31,7 +47,9 @@
       ],
       "options": {
         "cwd": "D:/DevTools/mingw64/bin"
-      }
+      },
+      "problemMatcher": [],
+      "group": "build"
     },
     {
       "type": "shell",
@@ -46,9 +64,7 @@
       "options": {
         "cwd": "/usr/bin"
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": [],
       "group": "build"
     }
   ],
