@@ -2,7 +2,7 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "docker g++ build",
+      "label": "linux g++ build",
       "command": "/usr/local/bin/g++",
       "args": [
         "-g",
@@ -21,23 +21,6 @@
     },
     {
       "type": "shell",
-      "label": "docker g++ build dir",
-      "command": "/usr/local/bin/g++",
-      "args": [
-        "-g",
-        "${fileDirname}/*.h",
-        "${fileDirname}/*.cpp",
-        "-o",
-        "${fileDirname}/exec.out"
-      ],
-      "options": {
-        "cwd": "/usr/local/bin"
-      },
-      "problemMatcher": [],
-      "group": "build"
-    },
-    {
-      "type": "shell",
       "label": "win g++ build",
       "command": "D:/DevTools/mingw64/bin/g++.exe",
       "args": [
@@ -49,6 +32,24 @@
       "options": {
         "cwd": "D:/DevTools/mingw64/bin"
       }
+    },
+    {
+      "type": "shell",
+      "label": "mac clang++ build",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
     }
   ],
   "version": "2.0.0"

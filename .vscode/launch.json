@@ -6,7 +6,7 @@
   "configurations": [
     {
       "preLaunchTask": "win g++ build",
-      "name": "win g++ compile & lanuch",
+      "name": "win compile & lanuch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
@@ -26,7 +26,7 @@
       ]
     },
     {
-      "name": "win g++ lanuch",
+      "name": "win lanuch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
@@ -46,8 +46,8 @@
       ]
     },
     {
-      "preLaunchTask": "docker g++ build",
-      "name": "docker g++ compile & lanuch",
+      "preLaunchTask": "linux g++ build",
+      "name": "docker compile & lanuch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -56,7 +56,7 @@
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
-      "miDebuggerPath": "/root/gdb/gdb/gdb",
+      "miDebuggerPath": "/root/gdb/bin/gdb",
       "MIMode": "gdb",
       "setupCommands": [
         {
@@ -76,7 +76,7 @@
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
-      "miDebuggerPath": "/root/gdb/gdb/gdb",
+      "miDebuggerPath": "/root/gdb/bin/gdb",
       "MIMode": "gdb",
       "setupCommands": [
         {
@@ -87,17 +87,34 @@
       ]
     },
     {
-      "preLaunchTask": "docker g++ build dir",
-      "name": "docker g++ compile & lanuch dir",
+      "preLaunchTask": "mac clang++ build",
+      "name": "mac compile & launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "mac launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "preLaunchTask": "linux g++ build",
+      "name": "linux compile & launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/exec.out",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
-      "miDebuggerPath": "/root/gdb/gdb/gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
       "MIMode": "gdb",
       "setupCommands": [
         {
@@ -107,5 +124,25 @@
         }
       ]
     },
+    {
+      "name": "linux launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "miDebuggerPath": "/usr/bin/gdb",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
   ]
 }
