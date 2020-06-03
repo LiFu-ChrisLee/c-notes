@@ -4,19 +4,41 @@
   // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+    // win
+    {
+      "preLaunchTask": "win gcc build",
+      "name": "win gcc compile & launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "D:\\DevTools\\mingw64\\bin\\gdb.exe",
+      "setupCommands": [
+          {
+              "description": "为 gdb 启用整齐打印",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          }
+      ]
+    },
     {
       "preLaunchTask": "win g++ build",
-      "name": "win compile & lanuch",
+      "name": "win g++ compile & lanuch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "D:/DevTools/mingw64/bin/gdb.exe",
+      "miDebuggerPath": "D:\\DevTools\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
           {
               "description": "为 gdb 启用整齐打印",
@@ -26,17 +48,17 @@
       ]
     },
     {
-      "name": "win lanuch",
+      "name": "win launch",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "D:/DevTools/mingw64/bin/gdb.exe",
+      "miDebuggerPath": "D:\\DevTools\\mingw64\\bin\\gdb.exe",
       "setupCommands": [
           {
               "description": "为 gdb 启用整齐打印",
@@ -45,50 +67,20 @@
           }
       ]
     },
+
+    // mac
     {
-      "preLaunchTask": "docker g++ build",
-      "name": "docker compile & lanuch",
-      "type": "cppdbg",
+      "preLaunchTask": "mac clang build",
+      "name": "mac clang compile & launch",
+      "type": "lldb",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
       "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "miDebuggerPath": "/root/gdb/bin/gdb",
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "为 gdb 启用整齐打印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "docker lanuch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "miDebuggerPath": "/root/gdb/bin/gdb",
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "为 gdb 启用整齐打印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "cwd": "${workspaceFolder}"
     },
     {
       "preLaunchTask": "mac clang++ build",
-      "name": "mac compile & launch",
+      "name": "mac clang++ compile & launch",
       "type": "lldb",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -103,9 +95,32 @@
       "args": [],
       "cwd": "${workspaceFolder}"
     },
+
+    // linux
+    {
+      "preLaunchTask": "linux gcc build",
+      "name": "linux gcc compile & launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "miDebuggerPath": "/usr/bin/gdb",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
     {
       "preLaunchTask": "linux g++ build",
-      "name": "linux compile & launch",
+      "name": "linux g++ compile & launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.out",
@@ -135,6 +150,70 @@
       "environment": [],
       "externalConsole": false,
       "miDebuggerPath": "/usr/bin/gdb",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+
+    // docker
+    {
+      "preLaunchTask": "docker gcc build",
+      "name": "docker gcc compile & launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "miDebuggerPath": "/root/gdb/bin/gdb",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "preLaunchTask": "docker g++ build",
+      "name": "docker g++ compile & lanuch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "miDebuggerPath": "/root/gdb/bin/gdb",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "docker launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "miDebuggerPath": "/root/gdb/bin/gdb",
       "MIMode": "gdb",
       "setupCommands": [
         {
