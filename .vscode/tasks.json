@@ -1,53 +1,6 @@
 {
   "tasks": [
-    {
-      "type": "shell",
-      "label": "win gcc build",
-      "command": "D:\\DevTools\\mingw64\\bin\\gcc.exe",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
-      ],
-      "problemMatcher": [],
-      "options": {
-        "cwd": "D:\\DevTools\\mingw64\\bin"
-      },
-      "group": "build"
-    },
-    {
-      "type": "shell",
-      "label": "mac clang build",
-      "command": "/usr/bin/clang",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.out"
-      ],
-      "options": {
-        "cwd": "/usr/bin"
-      },
-      "problemMatcher": [],
-      "group": "build"
-    },
-    {
-      "type": "shell",
-      "label": "linux gcc build",
-      "command": "/usr/bin/gcc",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}.out"
-      ],
-      "options": {
-        "cwd": "/usr/bin"
-      },
-      "problemMatcher": [],
-      "group": "build"
-    },
+    // docker
     {
       "type": "shell",
       "label": "docker gcc build",
@@ -61,7 +14,141 @@
       "options": {
         "cwd": "/usr/local/bin"
       },
-      "problemMatcher": [],
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "docker g++ build",
+      "command": "/usr/local/bin/g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/local/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+
+    // linux
+    {
+      "type": "shell",
+      "label": "linux gcc build",
+      "command": "/usr/bin/gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "linux g++ build",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+
+    // win
+    {
+      "type": "shell",
+      "label": "win gcc build",
+      "command": "D:\\DevTools\\mingw64\\bin\\gcc.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "options": {
+        "cwd": "D:\\DevTools\\mingw64\\bin"
+      },
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "win g++ build",
+      "command": "D:\\DevTools\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "D:\\DevTools\\mingw64\\bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+
+    // mac
+    {
+      "type": "shell",
+      "label": "mac clang build",
+      "command": "/usr/bin/clang",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+    {
+      "type": "shell",
+      "label": "mac clang++ build",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
       "group": "build"
     }
   ],
